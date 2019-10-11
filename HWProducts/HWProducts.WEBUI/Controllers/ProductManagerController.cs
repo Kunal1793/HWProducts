@@ -67,7 +67,10 @@ namespace HWProducts.WEBUI.Controllers
             }
             else 
             {
-                return View(product);
+                ProductManagerViewModel viewModel = new ProductManagerViewModel();
+                viewModel.Product = product;
+                viewModel.productCategories = productCategories.Collection();
+                return View(viewModel);
             }
         }
 

@@ -16,10 +16,16 @@ namespace HWProducts.Core.Model
         [DisplayName("Product Name")]
         [Required]
         public string Name { get; set; }
+        [DisplayName("Product Description")]
+        [Required]
         public string Description { get; set; }
 
         [Range(0, 1000)]
+        [DisplayName("Product Price")]
+        [Required]
         public decimal Price { get; set; }
+        [DisplayName("Product Category")]
+        [Required]
         public string Category { get; set; }
         public string Image { get; set; }
 
